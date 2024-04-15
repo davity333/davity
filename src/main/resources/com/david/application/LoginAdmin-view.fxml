@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cuadro" prefHeight="414.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.david.application.controllers.LoginAdmin">
+   <children>
+      <Text fx:id="iniciar" layoutX="160.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesion">
+         <font>
+            <Font name="Arial Black" size="43.0" />
+         </font>
+      </Text>
+      <TextField fx:id="usuariofield" layoutX="41.0" layoutY="136.0" prefHeight="38.0" prefWidth="278.0" />
+      <Text fx:id="nombre" layoutX="41.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de usuario">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="ingresarbutton" layoutX="84.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#onClickIngresarButton" prefHeight="50.0" prefWidth="137.0" text="Ingresar">
+         <font>
+            <Font name="Comic Sans MS" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="salirbutton" layoutX="401.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="50.0" prefWidth="114.0" text="Salir">
+         <font>
+            <Font name="Comic Sans MS" size="21.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordfield" layoutX="41.0" layoutY="230.0" prefHeight="38.0" prefWidth="278.0" />
+      <Text fx:id="vacio" fill="RED" layoutX="156.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="390.4">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="vacio1" fill="#29c438" layoutX="156.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.8000244140625">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

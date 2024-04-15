@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="746.0" prefWidth="1473.0" style="-fx-background-color: #DEEBF7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.david.application.controllers.CasaController">
+   <children>
+      <Pane layoutX="-6.0" layoutY="-8.0" prefHeight="200.0" prefWidth="1479.0" style="-fx-background-color: #9DC3E6;">
+         <children>
+            <Text fill="#3d6886" layoutX="303.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALMACEN DE ALIMENTOS">
+               <font>
+                  <Font name="Arial Black" size="69.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.02" radius="11.8525" spread="0.85" width="23.39">
+                     <input>
+                        <Shadow>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Shadow>
+                     </input>
+                     <color>
+                        <Color red="0.2925536036491394" green="0.6089642643928528" blue="0.7052631378173828" opacity="0.9900000095367432" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="140.0" layoutX="1326.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/cochesito.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="360.0" layoutY="292.0" prefHeight="274.0" prefWidth="317.0" style="-fx-background-color: #B4C6E6;">
+         <children>
+            <ImageView fitHeight="206.0" fitWidth="195.0" layoutX="61.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/empleado.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="empleado" onMouseClicked="#onClickEmpleadoButton" opacity="0.0" prefHeight="274.0" prefWidth="317.0" style="-fx-background-color: #B4C6E6;">
+               <effect>
+                  <DropShadow offsetX="10.0" offsetY="10.0">
+                     <color>
+                        <Color opacity="0.20060788094997406" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow offsetX="10.0" offsetY="10.0">
+               <color>
+                  <Color opacity="0.20060788094997406" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Pane layoutX="829.0" layoutY="294.0" prefHeight="274.0" prefWidth="317.0" style="-fx-background-color: #B4C6E6;">
+         <children>
+            <ImageView fitHeight="225.0" fitWidth="210.0" layoutX="56.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/administrador.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="admin" layoutX="1.0" onMouseClicked="#onClickAdminButton" opacity="0.0" prefHeight="274.0" prefWidth="317.0" style="-fx-background-color: #B4C6E6;">
+               <effect>
+                  <DropShadow offsetX="10.0" offsetY="10.0">
+                     <color>
+                        <Color opacity="0.20060788094997406" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow offsetX="10.0" offsetY="10.0">
+               <color>
+                  <Color opacity="0.20060785114765167" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Text fill="#cf6d6d" layoutX="405.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Como quieres iniciar sesion" wrappingWidth="987.3955383300781">
+         <font>
+            <Font name="Impact" size="60.0" />
+         </font>
+      </Text>
+      <Text fill="#ffcd19" layoutX="413.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLEADO" wrappingWidth="360.19549560546875">
+         <font>
+            <Font name="Comic Sans MS Bold" size="43.0" />
+         </font>
+         <effect>
+            <DropShadow offsetY="3.0">
+               <color>
+                  <Color opacity="0.41033440828323364" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <Text fill="#ffcd19" layoutX="782.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMINISTRADOR" wrappingWidth="403.92889404296875">
+         <font>
+            <Font name="Comic Sans MS Bold" size="43.0" />
+         </font>
+         <effect>
+            <DropShadow offsetY="3.0">
+               <color>
+                  <Color opacity="0.41033440828323364" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <ImageView fitHeight="206.0" fitWidth="195.0" layoutX="-13.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/degradado1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="206.0" fitWidth="195.0" layoutX="1278.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/degradado2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="431.0" layoutY="636.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/corazon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="431.0" layoutX="1045.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/corazon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="146.0" layoutX="667.0" layoutY="660.0" onMouseClicked="#onClickExitButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/quit.png" />
+         </image>
+         <effect>
+            <DropShadow offsetY="5.0">
+               <color>
+                  <Color opacity="0.5045592784881592" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1324.0" style="-fx-background-color: #F4B183;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.david.application.controllers.ProductosAdmin">
+   <children>
+      <Text layoutX="132.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En esta seccion encontraras los productos que los empleados han agregado al almacen" textAlignment="CENTER" wrappingWidth="980.8784027099609">
+         <font>
+            <Font name="Comic Sans MS Bold" size="33.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="regresar" fitHeight="78.0" fitWidth="244.0" layoutX="149.0" layoutY="609.0" onMouseClicked="#onClickregresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/regresar.png" />
+         </image>
+         <effect>
+            <DropShadow offsetX="0.3" offsetY="3.0">
+               <color>
+                  <Color opacity="0.3860182464122772" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane prefHeight="134.0" prefWidth="1324.0" style="-fx-background-color: #F0975A;">
+         <children>
+            <ImageView fitHeight="239.0" fitWidth="1001.0" layoutX="177.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/PRODUCTOSALMACEN.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="regresar1" fitHeight="165.0" fitWidth="240.0" layoutX="24.0" layoutY="-15.0" onMouseClicked="#onClickregresar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/HOJITA.png" />
+               </image>
+               <effect>
+                  <DropShadow offsetX="0.3" offsetY="3.0">
+                     <color>
+                        <Color opacity="0.3860182464122772" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="regresar11" fitHeight="143.0" fitWidth="142.0" layoutX="1166.0" layoutY="-4.0" onMouseClicked="#onClickregresar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/CAJAFLECHAabajo.png" />
+               </image>
+               <effect>
+                  <DropShadow offsetX="0.3" offsetY="3.0">
+                     <color>
+                        <Color opacity="0.3860182464122772" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="149.0" layoutY="283.0" prefHeight="317.0" prefWidth="1036.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text layoutX="298.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos del producto" wrappingWidth="402.39996337890625">
+               <font>
+                  <Font name="Arial Black" size="35.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <DropShadow offsetY="7.0" spread="0.38">
+               <color>
+                  <Color opacity="0.3009118437767029" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label fx:id="label1" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="490.0" layoutY="354.0" opacity="0.3" prefHeight="245.0" prefWidth="686.0" style="-fx-background-color: #FFFFFF;" text="Los datos apareceran aqui">
+         <font>
+            <Font name="HoloLens MDL2 Assets" size="39.0" />
+         </font>
+      </Label>
+      <Pane layoutX="149.0" layoutY="342.0" prefHeight="210.0" prefWidth="342.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Line endX="573.4000244140625" endY="-95.20001220703125" layoutX="-238.0" layoutY="96.0" opacity="0.29" startX="573.4000244140625" startY="156.20001220703125" />
+            <Text layoutX="7.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del producto:" wrappingWidth="332.0">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="6.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad de producto:" wrappingWidth="345.6784210205078">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="345.6784210205078">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="6.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo:" wrappingWidth="345.6784210205078">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caducidad:" wrappingWidth="345.6784210205078">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Text>
+            <Line endX="771.0" layoutX="265.0" layoutY="14.0" opacity="0.29" startX="-265.0" startY="-5.20001220703125" />
+         </children></Pane>
+      <Line endX="587.4000244140625" layoutX="589.0" layoutY="401.0" opacity="0.29" startX="-440.0" />
+      <Line endX="587.4000244140625" layoutX="589.0" layoutY="449.0" opacity="0.29" startX="-438.20001220703125" />
+      <Line endX="587.4000244140625" layoutX="590.0" layoutY="499.0" opacity="0.29" startX="-441.5999755859375" startY="-3.0517578125E-5" />
+      <Line endX="587.4000244140625" layoutX="589.0" layoutY="547.0" opacity="0.29" startX="-440.0" startY="-3.0517578125E-5" />
+      <Line endX="587.4000244140625" layoutX="596.0" layoutY="598.0" opacity="0.29" startX="-440.0" startY="-3.0517578125E-5" />
+      <ImageView fx:id="alta" fitHeight="78.0" fitWidth="244.0" layoutX="540.0" layoutY="620.0" onMouseClicked="#onClickalta" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/dar%20alta.png" />
+         </image>
+         <effect>
+            <DropShadow offsetX="0.3" offsetY="3.0">
+               <color>
+                  <Color opacity="0.3860182464122772" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="devolver" fitHeight="78.0" fitWidth="244.0" layoutX="937.0" layoutY="620.0" onMouseClicked="#onClickdevolver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/devolver.png" />
+         </image>
+         <effect>
+            <DropShadow offsetX="0.3" offsetY="3.0">
+               <color>
+                  <Color opacity="0.3860182464122772" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text fx:id="devolvido" fill="#dc2525" layoutX="37.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1225.60009765625">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
