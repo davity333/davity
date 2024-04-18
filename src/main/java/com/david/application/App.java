@@ -13,7 +13,7 @@ import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+//ORIGINAL SUBIDO A GIT
 public class App extends javafx.application.Application {
     private static Stage stageView;
     private static Stage stageRoot;

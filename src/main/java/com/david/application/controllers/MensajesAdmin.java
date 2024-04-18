@@ -36,7 +36,8 @@ public class MensajesAdmin {
 
     @FXML
     void initialize() {
-
+        if (App.msn.size()>0)
+            label.setText(App.msn.get(0));
     }
 }
 
