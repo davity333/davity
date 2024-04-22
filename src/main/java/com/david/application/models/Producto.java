@@ -8,8 +8,9 @@ public class Producto {
     private String codigo;
     private double precio;
     private String caducidad;
-    private Producto[] productos;
+    public Producto() {
 
+    }
 
     public Producto(String nombre, int cantidad, String codigo, String caducidad, double precio) {
         this.nombre = nombre;
@@ -18,9 +19,6 @@ public class Producto {
         this.precio = precio;
         this.caducidad = caducidad;
     }
-
-
-
 
     public String getNombre() {
         return nombre;
@@ -62,24 +60,6 @@ public class Producto {
         this.caducidad = caducidad;
     }
 
-    public void imprimirProductos() {
-        for (com.david.application.models.Producto producto : productos) {
-            System.out.println(producto.toString());
-        }
-    }
-    private ArrayList<Producto> products;
-
-    public void OtraClase(ArrayList<Producto> productos) {
-        this.products = products;
-        // Imprimir los datos en el constructor
-        imprimirDatos();
-    }
-
-    public void imprimirDatos() {
-        for (com.david.application.models.Producto producto : productos) {
-            System.out.println(producto.toString());
-        }
-    }
 
     @Override
     public String toString() {

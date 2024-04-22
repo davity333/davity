@@ -1,13 +1,26 @@
 package com.david.application.models;
 
+import java.util.ArrayList;
+
 public class Empleado extends Persona{
     private String mensaje;
-    private String usuario;
-    private String password;
+    private static String usuario = "david";
+    private static String password = "1234";
+    public static ArrayList<Producto> lista = new ArrayList<>();
 
-   public Empleado(String mensaje, String nombre, int telefono) {
+   public Empleado(String mensaje, String nombre, int telefono, String usuario , String password) {
         super(nombre,telefono);
         this.mensaje = mensaje;
+        this.usuario = usuario;
+        this.password = password;
+    }
+
+    public boolean addComponent(Producto component){
+        return lista.add(component);
+    }
+
+    public ArrayList<Producto> getLista() {
+        return lista;
     }
 
     public String getMensaje() {
@@ -18,28 +31,14 @@ public class Empleado extends Persona{
         this.mensaje = mensaje;
     }
 
-    public String getUsuario() {
+    public static String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
 
-    public String getPassword() {
+    public static String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void enviarMensaje(){
-
-    }
-
-    public void agregarProducto(){
-
-    }
 
 }

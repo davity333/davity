@@ -1,7 +1,7 @@
 package com.david.application.models;
 public class Persona {
-    private String nombre;
-    private int telefono;
+    protected String nombre;
+    protected int telefono;
 
 
     public Persona(String nombre, int telefono) {
@@ -25,4 +25,8 @@ public class Persona {
         this.telefono = telefono;
     }
 
+    @Override
+    public String toString() {
+        return "Nombre:" + nombre  + "\nTeléfono: " + telefono;
+    }
 }

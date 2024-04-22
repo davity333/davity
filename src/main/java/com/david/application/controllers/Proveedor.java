@@ -35,80 +35,88 @@ public class Proveedor {
     @FXML
     private TextField eliminarproveedor;
 
-
     @FXML
     void onClickagregar(MouseEvent event) {
-            String nombre = nombreproveedor.getText();
-            String numero = numerotelefonico.getText();
-            App.proveedor.add(nombre);
-            App.proveedor.add(numero);
+        String nombre = nombreproveedor.getText();
+        int numero = Integer.parseInt(numerotelefonico.getText());
+        com.david.application.models.Proveedor proveedores = new com.david.application.models.Proveedor(nombre,numero);
 
-        if (nombre.isEmpty() || numero.isEmpty()) {
+        if (nombre.isEmpty()|| numero<0) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Advertencia");
             alert.setHeaderText(null);
             alert.setContentText("Por favor, ingresa los datos que se te piden");
             alert.showAndWait();
         } else {
-            App.proveedor.add(nombre);
-            App.proveedor.add(numero);
+            com.david.application.models.Proveedor.addProvedor(proveedores);
 
 
-            if (App.proveedor.size() > 0) {
+            if(com.david.application.models.Proveedor.getProvedor().size()>0){
                 StringBuilder sb = new StringBuilder();
-                for (String proveedor : App.proveedor) {
+                for (Persona proveedor : com.david.application.models.Proveedor.getProvedor()) {
                     sb.append(proveedor);
                     sb.append("\n");
                 }
                 label.setText(sb.toString());
             }
+
         }
     }
 
 
     @FXML
     void onClickeliminar(MouseEvent event) {
-
         String nombre = nombreproveedor.getText();
-        String numero = numerotelefonico.getText();
-        boolean encontrado = false;
-        for(int i = 0; i < App.proveedor.size(); i += 2) {
-            String proveedorNombre = App.proveedor.get(i);
-            String proveedorNumero = App.proveedor.get(i + 1);
-            if (proveedorNombre.equals(nombre) && proveedorNumero.equals(numero)) {
-                App.proveedor.remove(i + 1);
-                App.proveedor.remove(i);
-                encontrado = true;
-                break;
+        int numero = Integer.parseInt(numerotelefonico.getText());
+        boolean vacio = false;
+        ArrayList<Persona> prover = com.david.application.models.Proveedor.getProvedor();
+        com.david.application.models.Proveedor proveedores = new com.david.application.models.Proveedor(nombre,numero);
+        System.out.println(prover);
+
+        if(nombre.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Advertencia");
+            alert.setHeaderText(null);
+            alert.setContentText("El nombre está vacío");
+            alert.showAndWait();
+            return;
+        }
+
+        if (!vacio) {
+            boolean encontrado = false;
+            for (int i = 0; i < prover.size(); i++) {
+                String nombreActual = prover.get(i).getNombre();
+                System.out.println("Nombre actual: " + nombreActual);
+                if (nombre.equals(nombreActual)) {
+                    prover.remove(i);
+                    StringBuilder sb = new StringBuilder();
+                    for (Persona proveedor : prover) {
+                        sb.append(proveedor);
+                        sb.append("\n");
+                    }
+                    label.setText(sb.toString());
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (!encontrado) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Advertencia");
+                alert.setHeaderText(null);
+                alert.setContentText("No existe");
+                alert.showAndWait();
             }
         }
 
-        if (encontrado) {
-            // Actualiza la etiqueta con la lista actualizada
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < App.proveedor.size(); i += 2) {
-                String proveedorNombre = App.proveedor.get(i);
-                String proveedorNumero = App.proveedor.get(i + 1);
-                sb.append(proveedorNombre);
-                sb.append("\n");
-                sb.append(proveedorNumero);
-                sb.append("\n");
-            }
-            label.setText(sb.toString());
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Proveedor");
-            alert.setHeaderText(null);
-            alert.setContentText("Este proveedor no fue encontrado");
-            alert.showAndWait();
-        }
 
     }
 
 
     @FXML
     void onClicksalir(MouseEvent event) {
-        App.getStageView().close();
+       // App.getStageView().close();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.close();
     }
 
 }

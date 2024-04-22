@@ -5,16 +5,16 @@ import java.util.ArrayList;
 public class Proveedor extends Persona{
 
     public Proveedor(String nombre, int telefono) {
-        super(nombre,telefono);
-
+        super(nombre, telefono);
     }
-public static ArrayList<Persona> provedores = new ArrayList<>();
+    private static ArrayList<Persona> provedor = new ArrayList<>();
 
-    public boolean addProvedor(Persona people){
-        return provedores.add(people);
+    public static boolean addProvedor(Persona people){
+        return provedor.add(people);
     }
 
-    public ArrayList<Persona> showProvedores(){
-        return provedores;
+
+    public static ArrayList<Persona> getProvedor() {
+        return provedor;
     }
 }

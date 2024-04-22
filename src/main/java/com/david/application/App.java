@@ -17,13 +17,9 @@ import java.util.ArrayList;
 public class App extends javafx.application.Application {
     private static Stage stageView;
     private static Stage stageRoot;
-    static String  mensajote;
-    public static ArrayList<String> msn = new ArrayList<>();
-    public static ArrayList<String> addproduct = new ArrayList<>();
-    public static ArrayList<String> mensajedevuelta = new ArrayList<>();
-    //////
-    public static ArrayList<String> proveedor = new ArrayList<>();
 
+    public static ArrayList<String> msn = new ArrayList<>();
+    public static ArrayList<String> mensajedevuelta = new ArrayList<>();
 
 ////////////
     @Override

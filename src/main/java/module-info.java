@@ -9,5 +9,6 @@ module com.david.application {
     opens com.david.application to javafx.fxml;
     exports com.david.application;
     exports com.david.application.controllers;
+    exports com.david.application.models;
     opens com.david.application.controllers to javafx.fxml;
 }

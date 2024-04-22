@@ -1,6 +1,7 @@
 package com.david.application.controllers;
 
 import com.david.application.App;
+import com.david.application.models.Empleado;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -32,9 +33,12 @@ public class Login {
         stage.close();
     }
 
+    String name = Empleado.getUsuario();
+    String pass = Empleado.getPassword();
+
     @FXML
     void onClickIngresar(MouseEvent event) {
-        if (nombre.getText().equals("david") && password.getText().equals("1234")) {
+        if (nombre.getText().equals(name) && password.getText().equals(pass)) {
             App.newStage("menuempleo-view","Hola empleado");
             vacio.setText("Datos correctos");
         }else{

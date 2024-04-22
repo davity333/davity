@@ -1,15 +1,13 @@
 package com.david.application.controllers;
 
 import com.david.application.App;
-import com.david.application.models.Inventario;
+import com.david.application.models.Empleado;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.scene.control.Alert;
-
-import java.util.ArrayList;
 
 public class Producto {
 
@@ -64,7 +62,8 @@ public class Producto {
         }
     }
 
-Inventario invent = new Inventario();
+Empleado empleado = new Empleado("","",0,"","");
+
 @FXML
 void onClickdatos(MouseEvent event) {
     String nombre = nombrelabel.getText();
@@ -75,7 +74,7 @@ void onClickdatos(MouseEvent event) {
 
     com.david.application.models.Producto productos = new com.david.application.models.Producto(nombre, cantidad, codigo, caducidad, precio);
 
-    if (invent.addComponent(productos)) {
+    if (empleado.addComponent(productos)) {
         System.out.println("Registro exitoso");
     } else {
         System.out.println("No se metio");
