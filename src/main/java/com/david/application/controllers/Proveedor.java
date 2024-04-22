@@ -59,7 +59,6 @@ public class Proveedor {
                 }
                 label.setText(sb.toString());
             }
-
         }
     }
 
@@ -111,7 +110,16 @@ public class Proveedor {
 
     }
 
-
+    @FXML
+    void initialize(){
+        ArrayList<Persona> proveedores = com.david.application.models.Proveedor.getProvedor();
+        StringBuilder sb = new StringBuilder();
+        for (Persona proveedor : proveedores) {
+            sb.append(proveedor);
+            sb.append("\n");
+        }
+        label.setText(sb.toString());
+    }
     @FXML
     void onClicksalir(MouseEvent event) {
        // App.getStageView().close();
